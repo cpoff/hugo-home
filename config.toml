@@ -1,97 +1,88 @@
-baseurl = "http://www.example.com"
-title = "Curt Poff"
-theme = "coder"
-languagecode = "en"
-defaultcontentlanguage = "en"
-paginate = 10
-canonifyurls = true
-pygmentsstyle = "b2"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+baseURL                   = "https://example.com"
+builddrafts                = false
+languageCode               = "en"
+canonifyurls               = true
+contentdir                 = "content"
+layoutdir                  = "layouts"
+publishdir                 = "public"
+enableEmoji                = true
+hasCJKLanguage             = true
+summaryLength              = 200
+Paginate                   = 8
 
-disqusShortname = ""
+theme                      = "AllinOne"
+title                      = "Curt Poff"
+
+pygmentsuseclasses         = true
+
+
+[permalinks]
+  blog                     = "blog/:year/:month/:day/:slug/"
+
+
+[taxonomies]
+  tag                      = "tags"
+  #series                   = "series"
+  category                 = "categories"
+
+
+[menu]
+  [[menu.main]]
+    name                   = "Blog"
+    weight                 = -120
+    identifier             = "blog"
+    url                    = "https://blog.curtpoff.com"
+
+  [[menu.main]]
+    name                   = "Contact"
+    weight                 = -110
+    identifier             = "contact"
+    url                    = "contact/"
+
+  [[menu.main]]
+    name                   = "About"
+    weight                 = -100
+    identifier             = "about"
+    url                    = "about/"
+
+
 
 [params]
-    author = "Curt Poff"
-    description = "Curt Poff is a veteran techie now living in Tucson. Past homes include Portland and the Bay Area, where he worked for Macworld, Walmart.com, and Nike."
-    keywords = "blog, developer, personal, Tucson, Arizona, Portland, Oregon, Portland State, Timbers, Chiefs, Royals, Mizzou, producer, project manager,"
-    info = "Tucson resident, Missouri native"
-    avatarurl = "img/androidify300.png"
-		faviconfile = "img/favicon.ico"               # from static/
-    #footercontent = "Enter a text here."
-    dateformat = "January 2, 2006"
-    hideCredits = false
-    hideCopyright = false
+  faviconfile              = "img/zheng.png"               # from static/
+  avatar                   = "/img/androidify300.png"             # path to image in static dir e.g img/avatar.png
+  author                   = "Curt Poff"
+  description              = ["Tucson resident, Missouri native, web guy, sports fan."]           # appears in the site header when set to a non-empty string
+  #welcome_head             = "Hello, World!"
+  #welcome_word             = "~ No Day But Today ~"
 
-    # Git Commit in Footer, uncomment the line below to enable it.
-    commit = "https://github.com/luizdepra/hugo-coder/tree/"
+  latestpostscount         = 5                             # how many posts to display on the home page
+  bloggroupby              = 'year'
+  dateform                 = "Jan 2, 2006"
+  dateformfull             = "2006-01-02  Monday  15:04:05"
+  noshowreadtime           = false                         # if true, don't show "<x> minutes read" in posts
 
-    rtl = false
+  # slides
+  slidesDirPath            = "themes/AllinOne/static/img/header-slides"    # path to image in local dir (path for hugo)
+  slidesDirPathURL         = "img/header-slides"    # path to image in static dir (for static pages)
 
-    # Use inverted colors
-    inverted = false
+  # highlighting
+  highlightjs              = true
 
-    # Custom CSS
-    custom_css = []
+  # latex
+  katex                    = true
 
-[[params.social]]
-    name = "GitHub"
-    icon = "fab fa-github"
-    weight = 15
-    url = "https://github.com/cpoff/"
-[[params.social]]
-    name = "Twitter"
-    icon = "fab fa-twitter"
-    weight = 10
-    url = "https://twitter.com/cpoff/"
-[[params.social]]
-    name = "LinkedIn"
-    icon = "fab fa-linkedin"
-    weight = 30
-    url = "https://www.linkedin.com/in/cpoff/"
-[[params.social]]
-    name = "Instagram"
-    icon = "fab fa-instagram"
-    weight = 20
-    url = "https://instagram.com/cpoff"
-[[params.social]]
-		name = "Facebook"
-		icon = "fab fa-facebook"
-		weight = 40
-		url = "https://facebook.com/fatback"
-[[params.social]]
-		name = "Keybase"
-		icon = "fab fa-keybase"
-		weight = 70
-		url = "https://keybase.io/cpoff"
-[[params.social]]
-		name = "Telegram"
-		icon = "fab fa-telegram"
-		weight = 100
-		url = "https://t.me/cpoff"
+  # links
+  email                    = "curt.poff@gmail.com"
+  github                   = "//github.com/cpoff"
+  linkedin                 = "//linkedin.com/in/cpoff"
+  facebook                 = "//facebook.com/fatback"
+  #googleplus               = "//google.com/you"
+  twitter                  = "//twitter.com/cpoff"
+  #px500                    = "//px500"
+  instagram                = "//instagram.com/cpoff"
+  telegram                = "//t.me/cpoff"
+  keybase                = "//keybase.io/cpoff"
+  include_rss              = true  
 
-
-
-[languages]
-    [languages.en]
-        languagename = "English"
-
-        [[languages.en.menu.main]]
-        name = "About"
-        weight = 2
-        url = "/about/"
-
-        [[languages.en.menu.main]]
-        name = "Blog"
-        weight = 1
-        url = "https://blog.curtpoff.com"
-
-        [[languages.en.menu.main]]
-        name = "Resume"
-        weight = 3
-        url = "/resume/"
-
-        [[languages.en.menu.main]]
-        name = "Contact"
-        weight = 5
-        url = "/contact/"
+  # analytics
+#  googleAnalytics          = "your-google-analytic-id"
